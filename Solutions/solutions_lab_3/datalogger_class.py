@@ -8,7 +8,7 @@ import time
 from sensors import *
 
 class datalogger:
-    def __init__(self,SPI,cs):
+    def __init__(self,spi,cs):
         sdcard = sdcardio.SDCard(spi, cs)
         self.vfs = storage.VfsFat(sdcard)
         storage.mount(self.vfs, "/sd")
